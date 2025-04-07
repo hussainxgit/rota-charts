@@ -76,13 +76,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Samia"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -158,7 +151,7 @@
                     "shiftType": "overnight",
                     "time": "10pm to 8am",
                     "doctors": [
-                        "Mona"
+                        "Mona abdulghafar"
                     ]
                 }
             ],
@@ -193,13 +186,7 @@
                     "shiftType": "UNIT A",
                     "time": "All Day",
                     "doctors": [
-                        "Khalid R"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
+                        "Khalid R",
                         "Samia"
                     ]
                 },
@@ -317,13 +304,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Samia"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -432,13 +412,6 @@
                     "time": "All Day",
                     "doctors": [
                         "Hassan"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Samia"
                     ]
                 },
                 {
@@ -555,13 +528,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Samia"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -672,13 +638,7 @@
                     "shiftType": "UNIT A",
                     "time": "All Day",
                     "doctors": [
-                        "Amer"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
+                        "Amer",
                         "Nabil"
                     ]
                 },
@@ -795,13 +755,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Nabil"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -863,14 +816,14 @@
                     "time": "4pm to 11pm",
                     "doctors": [
                         "Ruba",
-                        "Mona"
+                        "Mona abdulghafar"
                     ]
                 },
                 {
                     "shiftType": "night",
                     "time": "6pm to 2am",
                     "doctors": [
-                        "Ghazi"
+                        "Ghazi Harbi"
                     ]
                 },
                 {
@@ -913,13 +866,6 @@
                     "time": "All Day",
                     "doctors": [
                         "Nasser"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Nabil"
                     ]
                 },
                 {
@@ -1036,13 +982,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Nabil"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -1151,13 +1090,7 @@
                     "shiftType": "UNIT A",
                     "time": "All Day",
                     "doctors": [
-                        "Moez"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
+                        "Moez",
                         "Nabil"
                     ]
                 },
@@ -1274,13 +1207,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Nabil"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -1391,13 +1317,6 @@
                     "time": "All Day",
                     "doctors": [
                         "Amer"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Nabil"
                     ]
                 },
                 {
@@ -1514,13 +1433,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Samia"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -1630,13 +1542,7 @@
                     "shiftType": "UNIT A",
                     "time": "All Day",
                     "doctors": [
-                        "Nasser"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
+                        "Nasser",
                         "Samia"
                     ]
                 },
@@ -1754,13 +1660,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Samia"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -1835,7 +1734,7 @@
                     "shiftType": "overnight",
                     "time": "10pm to 8am",
                     "doctors": [
-                        "Mona"
+                        "Mona abdulghafar"
                     ]
                 }
             ],
@@ -1871,13 +1770,6 @@
                     "time": "All Day",
                     "doctors": [
                         "Khalid R"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Samia"
                     ]
                 },
                 {
@@ -1993,13 +1885,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Samia"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -2110,13 +1995,6 @@
                     "time": "All Day",
                     "doctors": [
                         "Hassan"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Samia"
                     ]
                 },
                 {
@@ -2234,13 +2112,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Samia"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -2350,13 +2221,7 @@
                     "shiftType": "UNIT A",
                     "time": "All Day",
                     "doctors": [
-                        "Esmail"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
+                        "Esmail",
                         "Nabil"
                     ]
                 },
@@ -2474,13 +2339,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Nabil"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -2594,13 +2452,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Nabil"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -2674,7 +2525,7 @@
                     "shiftType": "overnight",
                     "time": "10pm to 8am",
                     "doctors": [
-                        "Mona"
+                        "Mona abdulghafar"
                     ]
                 }
             ],
@@ -2710,13 +2561,6 @@
                     "time": "All Day",
                     "doctors": [
                         "Soud"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Nabil"
                     ]
                 },
                 {
@@ -2831,13 +2675,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Nabil"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -2946,13 +2783,7 @@
                     "shiftType": "UNIT A",
                     "time": "All Day",
                     "doctors": [
-                        "Moez"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
+                        "Moez",
                         "Nabil"
                     ]
                 },
@@ -3067,13 +2898,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Nabil"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -3181,13 +3005,7 @@
                     "shiftType": "UNIT A",
                     "time": "All Day",
                     "doctors": [
-                        "Amer"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
+                        "Amer",
                         "Samia"
                     ]
                 },
@@ -3302,13 +3120,6 @@
                     ]
                 },
                 {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Samia"
-                    ]
-                },
-                {
                     "shiftType": "UNIT B",
                     "time": "All Day",
                     "doctors": [
@@ -3354,7 +3165,7 @@
                     "time": "8am to 5pm",
                     "doctors": [
                         "Noura S",
-                        "Ghazi"
+                        "Ghazi Harbi"
                     ]
                 },
                 {
@@ -3417,13 +3228,6 @@
                     "time": "All Day",
                     "doctors": [
                         "Nasser"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
-                        "Samia"
                     ]
                 },
                 {
@@ -3533,13 +3337,7 @@
                     "shiftType": "UNIT A",
                     "time": "All Day",
                     "doctors": [
-                        "Marouf"
-                    ]
-                },
-                {
-                    "shiftType": "UVEITIS",
-                    "time": "All Day",
-                    "doctors": [
+                        "Marouf",
                         "Samia"
                     ]
                 },
