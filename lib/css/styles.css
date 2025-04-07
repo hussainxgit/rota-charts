@@ -1,10 +1,8 @@
 :root {
     --color-primary: #0d6efd;
-    /* Bootstrap primary color */
     --color-secondary: #198754;
-    /* Bootstrap success color */
     --color-tertiary: #fd7e14;
-    /* Bootstrap warning color */
+    --color-danger: #dc3545;
     --color-background: #f8f9fa;
     --color-white: #fff;
     --color-text: #212529;
@@ -24,27 +22,27 @@
     --font-size-lg: 1.75rem;
 }
 
-/* Timeline Layout */
 .timeline-container {
     position: relative;
     overflow-x: auto;
+    /* Ensures horizontal scrolling if content overflows */
     margin-top: var(--spacing-sm);
-}
-
-.loading-spinner {
-    display: none;
+    width: 100%;
+    /* Ensures the container doesn't exceed its parent width */
 }
 
 .timeline {
     display: grid;
     grid-template-columns: 150px 1fr;
+    /* Adjust columns as needed */
     width: 100%;
+    /* Prevents overflow by constraining the width */
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
     overflow: hidden;
+    /* Hides any overflowing content */
 }
 
-/* Y-Axis Styles */
 .y-axis {
     display: flex;
     flex-direction: column;
@@ -56,25 +54,31 @@
     height: 40px;
     display: flex;
     align-items: center;
-    padding-right: var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
     font-weight: 500;
     font-size: var(--font-size-sm);
     border-bottom: 1px solid var(--color-border-light);
-    padding-left: 0.5rem;
 }
 
-/* Chart Area */
 .chart-area {
     position: relative;
     min-width: 800px;
+    /* Ensures the chart has a minimum width */
+    max-width: 100%;
+    /* Prevents it from exceeding the container width */
     background-color: var(--color-white);
+    overflow-x: auto;
+    /* Adds horizontal scrolling if needed */
 }
 
 .x-axis {
     display: grid;
-    grid-template-columns: repeat(24, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    /* Adjust the number of columns */
     border-bottom: 1px solid var(--color-border);
     height: 30px;
+    overflow: hidden;
+    /* Prevents overflow of the axis */
 }
 
 .x-label {
@@ -90,7 +94,6 @@
     position: relative;
 }
 
-/* Shift Blocks */
 .shift-block {
     position: absolute;
     height: 30px;
@@ -98,7 +101,8 @@
     border-radius: var(--border-radius-sm);
     color: var(--color-white);
     font-size: var(--font-size-xs);
-    padding: 0 6px;
+    padding: 0 20px; /* Added padding for better text visibility */
+    margin: 0 2px; /* Added margin to prevent overlap */
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -111,7 +115,6 @@
     opacity: 0.9;
 }
 
-/* Shift Categories */
 .shift-firstOnCall {
     background-color: var(--color-primary);
 }
@@ -124,14 +127,12 @@
     background-color: var(--color-tertiary);
 }
 
-/* Time Indicators */
 .time-indicator {
     position: absolute;
     top: 0;
     bottom: 0;
     width: 2px;
     background-color: rgba(220, 53, 69, 0.7);
-    /* Bootstrap danger color */
     z-index: 10;
     pointer-events: none;
     display: none;
@@ -139,8 +140,7 @@
 
 .time-label {
     position: absolute;
-    background-color: #dc3545;
-    /* Bootstrap danger color */
+    background-color: var(--color-danger);
     color: var(--color-white);
     padding: 3px 6px;
     border-radius: var(--border-radius-sm);
@@ -163,11 +163,9 @@
     box-shadow: var(--shadow-sm);
 }
 
-/* Tooltip */
 .tooltip {
     position: absolute;
     background-color: rgba(33, 37, 41, 0.9);
-    /* Bootstrap dark color */
     color: var(--color-white);
     padding: var(--spacing-sm);
     border-radius: var(--border-radius-sm);
@@ -179,7 +177,6 @@
     box-shadow: var(--shadow-md);
 }
 
-/* Stats Table */
 .stats-table {
     width: 100%;
     border-collapse: collapse;
@@ -198,26 +195,130 @@
     font-weight: 600;
 }
 
-/* Override Bootstrap tooltip class to prevent conflicts */
 #tooltip {
     opacity: 1;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .timeline {
         grid-template-columns: 120px 1fr;
     }
 
-    .x-label {
+    .x-label,
+    .y-label,
+    .shift-block {
         font-size: var(--font-size-xs);
     }
 
-    .y-label {
-        font-size: var(--font-size-xs);
+    .chart-area {
+        min-width: 100%;
+        overflow-x: auto;
     }
 
     .shift-block {
-        font-size: var(--font-size-xs);
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+
+    .stats-table th,
+    .stats-table td {
+        font-size: var(--font-size-xs); /* Smaller font size for tables */
+        padding: 0.25rem; /* Reduce padding */
+    }
+
+    .stats-table {
+        margin-top: var(--spacing-sm); /* Adjust spacing */
+    }
+
+    .d-flex {
+        flex-wrap: wrap !important; /* Ensure wrapping for flex items */
+    }
+
+    .form-select {
+        width: 100%; /* Make dropdowns full-width */
+        max-width: none; /* Remove max-width restriction */
+        margin-bottom: var(--spacing-sm); /* Add spacing between elements */
+    }
+
+    #refresh-btn {
+        width: 100%; /* Make the button full-width */
+    }
+
+    .stat-item {
+        flex: 1 1 100%; /* Make stats items stack vertically */
+        text-align: center; /* Center-align text */
+        margin-bottom: var(--spacing-sm); /* Add spacing between items */
+    }
+
+    .timeline-container {
+        overflow-x: auto; /* Ensure horizontal scrolling if needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline {
+        grid-template-columns: 100px 1fr;
+    }
+
+    .x-label,
+    .y-label {
+        font-size: 0.65rem; /* Further reduce font size */
+    }
+
+    .shift-block {
+        font-size: 0.65rem; /* Smaller font size for shift blocks */
+        padding: 0 5px; /* Further reduce padding */
+    }
+
+    .time-label {
+        font-size: 0.65rem; /* Adjust time label font size */
+        padding: 2px 4px; /* Adjust padding */
+    }
+
+    .doctor-count {
+        font-size: 0.65rem; /* Adjust doctor count font size */
+        padding: var(--spacing-xs); /* Adjust padding */
+    }
+
+    .stats-table th,
+    .stats-table td {
+        font-size: 0.65rem; /* Smaller font size for tables */
+    }
+
+    .tooltip {
+        font-size: 0.65rem; /* Adjust tooltip font size */
+        max-width: 200px; /* Reduce max width */
+    }
+
+    h1 {
+        font-size: var(--font-size-lg); /* Reduce heading size */
+    }
+
+    .card-body {
+        padding: var(--spacing-sm); /* Reduce padding inside cards */
+    }
+
+    .timeline {
+        grid-template-columns: 80px 1fr; /* Reduce Y-axis width */
+    }
+
+    .shift-block {
+        font-size: 0.6rem; /* Reduce font size for shift blocks */
+        padding: 0 4px; /* Reduce padding */
+    }
+
+    .time-label,
+    .doctor-count {
+        font-size: 0.6rem; /* Adjust font size for labels */
+        padding: 2px 4px; /* Adjust padding */
+    }
+
+    .stats-table th,
+    .stats-table td {
+        font-size: 0.6rem; /* Smaller font size for table content */
+    }
+
+    .tooltip {
+        font-size: 0.6rem; /* Adjust tooltip font size */
+        max-width: 150px; /* Reduce tooltip width */
     }
 }
