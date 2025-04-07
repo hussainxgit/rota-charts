@@ -22,25 +22,45 @@
     --font-size-lg: 1.75rem;
 }
 
+.control-panel {
+    margin-bottom: 1rem;
+}
+
+.control-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.form-control,
+.btn {
+    height: 46px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
 .timeline-container {
     position: relative;
     overflow-x: auto;
-    /* Ensures horizontal scrolling if content overflows */
     margin-top: var(--spacing-sm);
     width: 100%;
-    /* Ensures the container doesn't exceed its parent width */
 }
 
 .timeline {
     display: grid;
     grid-template-columns: 150px 1fr;
-    /* Adjust columns as needed */
     width: 100%;
-    /* Prevents overflow by constraining the width */
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
     overflow: hidden;
-    /* Hides any overflowing content */
 }
 
 .y-axis {
@@ -63,22 +83,17 @@
 .chart-area {
     position: relative;
     min-width: 800px;
-    /* Ensures the chart has a minimum width */
     max-width: 100%;
-    /* Prevents it from exceeding the container width */
     background-color: var(--color-white);
     overflow-x: auto;
-    /* Adds horizontal scrolling if needed */
 }
 
 .x-axis {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    /* Adjust the number of columns */
     border-bottom: 1px solid var(--color-border);
     height: 30px;
     overflow: hidden;
-    /* Prevents overflow of the axis */
 }
 
 .x-label {
@@ -101,8 +116,8 @@
     border-radius: var(--border-radius-sm);
     color: var(--color-white);
     font-size: var(--font-size-xs);
-    padding: 0 20px; /* Added padding for better text visibility */
-    margin: 0 2px; /* Added margin to prevent overlap */
+    padding: 0 20px;
+    margin: 0 2px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -161,6 +176,9 @@
     font-size: var(--font-size-sm);
     white-space: nowrap;
     box-shadow: var(--shadow-sm);
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .tooltip {
@@ -199,126 +217,275 @@
     opacity: 1;
 }
 
-@media (max-width: 768px) {
-    .timeline {
-        grid-template-columns: 120px 1fr;
+/* Top 3 Ranking Styles */
+.stats-table tbody tr:nth-child(-n+3) {
+    position: relative;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stats-table tbody tr:nth-child(1) {
+    background: linear-gradient(to right, rgba(255, 215, 0, 0.2) 0%, rgba(255, 255, 255, 0.8) 100%);
+    border-left: 4px solid gold;
+}
+
+.stats-table tbody tr:nth-child(2) {
+    background: linear-gradient(to right, rgba(192, 192, 192, 0.2) 0%, rgba(255, 255, 255, 0.8) 100%);
+    border-left: 4px solid silver;
+}
+
+.stats-table tbody tr:nth-child(3) {
+    background: linear-gradient(to right, rgba(205, 127, 50, 0.2) 0%, rgba(255, 255, 255, 0.8) 100%);
+    border-left: 4px solid #cd7f32;
+}
+
+.stats-table tbody tr:nth-child(-n+3):hover {
+    transform: translateX(5px);
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.stats-table tbody tr:nth-child(1) td:first-child::before {
+    content: "🥇";
+    margin-right: 6px;
+}
+
+.stats-table tbody tr:nth-child(2) td:first-child::before {
+    content: "🥈";
+    margin-right: 6px;
+}
+
+.stats-table tbody tr:nth-child(3) td:first-child::before {
+    content: "🥉";
+    margin-right: 6px;
+}
+
+/* Add Bootstrap Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css");
+
+/* Mobile Responsive Styles */
+@media (max-width: 992px) {
+    .container {
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
     }
 
-    .x-label,
-    .y-label,
-    .shift-block {
-        font-size: var(--font-size-xs);
+    .row {
+        margin-left: 0;
+        margin-right: 0;
     }
 
-    .chart-area {
-        min-width: 100%;
-        overflow-x: auto;
+    .form-select,
+    .btn {
+        margin-bottom: var(--spacing-sm);
     }
 
-    .shift-block {
-        padding: 0 10px; /* Reduce padding for smaller screens */
-    }
-
-    .stats-table th,
-    .stats-table td {
-        font-size: var(--font-size-xs); /* Smaller font size for tables */
-        padding: 0.25rem; /* Reduce padding */
-    }
-
-    .stats-table {
-        margin-top: var(--spacing-sm); /* Adjust spacing */
-    }
-
-    .d-flex {
-        flex-wrap: wrap !important; /* Ensure wrapping for flex items */
-    }
-
-    .form-select {
-        width: 100%; /* Make dropdowns full-width */
-        max-width: none; /* Remove max-width restriction */
-        margin-bottom: var(--spacing-sm); /* Add spacing between elements */
+    .control-grid {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     #refresh-btn {
-        width: 100%; /* Make the button full-width */
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        grid-template-columns: 100px 1fr;
+    }
+
+    .y-label {
+        font-size: var(--font-size-xs);
+        padding: 0 var(--spacing-xs);
+        height: 36px;
+    }
+
+    .row {
+        height: 36px;
+    }
+
+    .chart-area {
+        min-width: 600px;
+    }
+
+    .x-label {
+        font-size: 0.7rem;
+    }
+
+    .shift-block {
+        height: 28px;
+        font-size: 0.7rem;
+        padding: 0 8px;
+    }
+
+    .doctor-count {
+        max-width: 200px;
+        font-size: 0.7rem;
+    }
+
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .gap-3 {
+        gap: var(--spacing-xs) !important;
+    }
+
+    .card {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .card-body {
+        padding: var(--spacing-sm);
+    }
+
+    .col-md-10 {
+        padding: 0;
+    }
+
+    .form-select,
+    .btn {
+        max-width: 100% !important;
+        width: 100%;
     }
 
     .stat-item {
-        flex: 1 1 100%; /* Make stats items stack vertically */
-        text-align: center; /* Center-align text */
-        margin-bottom: var(--spacing-sm); /* Add spacing between items */
+        width: 100%;
+        text-align: center;
+        margin-bottom: var(--spacing-xs);
     }
 
-    .timeline-container {
-        overflow-x: auto; /* Ensure horizontal scrolling if needed */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .stats-table tbody tr:nth-child(-n+3) td:first-child {
+        font-weight: bold;
+    }
+
+    .stats-table tbody tr:nth-child(1) td:first-child::before,
+    .stats-table tbody tr:nth-child(2) td:first-child::before,
+    .stats-table tbody tr:nth-child(3) td:first-child::before {
+        margin-right: 2px;
     }
 }
 
 @media (max-width: 480px) {
     .timeline {
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 80px 1fr;
     }
 
-    .x-label,
     .y-label {
-        font-size: 0.65rem; /* Further reduce font size */
+        font-size: 0.65rem;
+        padding: 0 2px;
+        height: 32px;
+    }
+
+    .row {
+        height: 32px;
+    }
+
+    .chart-area {
+        min-width: 400px;
+    }
+
+    .x-label {
+        font-size: 0.65rem;
     }
 
     .shift-block {
-        font-size: 0.65rem; /* Smaller font size for shift blocks */
-        padding: 0 5px; /* Further reduce padding */
+        height: 24px;
+        font-size: 0.65rem;
+        padding: 0 4px;
     }
 
     .time-label {
-        font-size: 0.65rem; /* Adjust time label font size */
-        padding: 2px 4px; /* Adjust padding */
+        font-size: 0.65rem;
+        padding: 2px 4px;
     }
 
     .doctor-count {
-        font-size: 0.65rem; /* Adjust doctor count font size */
-        padding: var(--spacing-xs); /* Adjust padding */
+        max-width: 150px;
+        font-size: 0.65rem;
+        padding: 2px 4px;
+    }
+
+    .tooltip {
+        font-size: 0.65rem;
+        max-width: 200px;
+        padding: var(--spacing-xs);
     }
 
     .stats-table th,
     .stats-table td {
-        font-size: 0.65rem; /* Smaller font size for tables */
+        padding: 4px;
+        font-size: 0.65rem;
     }
 
-    .tooltip {
-        font-size: 0.65rem; /* Adjust tooltip font size */
-        max-width: 200px; /* Reduce max width */
-    }
-
-    h1 {
-        font-size: var(--font-size-lg); /* Reduce heading size */
+    .card {
+        margin-bottom: var(--spacing-xs);
     }
 
     .card-body {
-        padding: var(--spacing-sm); /* Reduce padding inside cards */
+        padding: var(--spacing-xs);
     }
 
+    h1 {
+        font-size: 1.3rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Add support for small mobile devices */
+@media (max-width: 350px) {
     .timeline {
-        grid-template-columns: 80px 1fr; /* Reduce Y-axis width */
+        grid-template-columns: 70px 1fr;
+    }
+
+    .y-label {
+        font-size: 0.6rem;
+    }
+
+    .chart-area {
+        min-width: 280px;
+    }
+
+    .x-label {
+        font-size: 0.6rem;
     }
 
     .shift-block {
-        font-size: 0.6rem; /* Reduce font size for shift blocks */
-        padding: 0 4px; /* Reduce padding */
+        height: 22px;
+        font-size: 0.6rem;
+        padding: 0 2px;
     }
 
-    .time-label,
-    .doctor-count {
-        font-size: 0.6rem; /* Adjust font size for labels */
-        padding: 2px 4px; /* Adjust padding */
+    h1 {
+        font-size: 1.2rem;
     }
 
     .stats-table th,
     .stats-table td {
-        font-size: 0.6rem; /* Smaller font size for table content */
+        padding: 2px;
+        font-size: 0.6rem;
+    }
+}
+
+/* Responsive adjustments */
+@media (min-width: 576px) {
+    .control-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .tooltip {
-        font-size: 0.6rem; /* Adjust tooltip font size */
-        max-width: 150px; /* Reduce tooltip width */
+    #refresh-btn {
+        grid-column: span 2;
     }
 }
