@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Schedule Timeline</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Doctor Schedule Timeline</h1>
+
+        <div class="controls">
+            <select id="date-picker" class="date-picker">
+                <!-- Dates will be populated by JS -->
+            </select>
+
+            <select id="filter-dropdown" class="filter-dropdown">
+                <option value="all">All Shifts</option>
+                <option value="firstOnCall">First On Call</option>
+                <option value="secondOnCall">Second On Call</option>
+                <option value="thirdOnCall">Third On Call</option>
+            </select>
+
+            <button id="refresh-btn" class="refresh-btn">Refresh</button>
+        </div>
+
+        <div class="statistics">
+            <div class="stat-item">
+                <strong>Total Shifts:</strong> <span id="total-shifts">0</span>
+            </div>
+            <div class="stat-item">
+                <strong>Doctors on Duty:</strong> <span id="total-doctors">0</span>
+            </div>
+            <div class="stat-item">
+                <strong>Selected Date:</strong> <span id="selected-date">None</span>
+            </div>
+        </div>
+
+        <div class="timeline-container">
+            <div class="loading-spinner" id="loading-spinner"></div>
+            <div class="timeline" id="timeline">
+                <div class="y-axis" id="y-axis">
+                    <!-- Y-axis labels will be populated by JS -->
+                </div>
+
+                <div class="chart-area" id="chart-area">
+                    <div class="x-axis" id="x-axis">
+                        <!-- X-axis labels will be populated by JS -->
+                    </div>
+                    <div id="rows-container">
+                        <!-- Rows will be populated by JS -->
+                    </div>
+                    <div class="time-indicator" id="time-indicator">
+                        <div class="time-label" id="time-label"></div>
+                        <div class="doctor-count" id="doctor-count"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tooltip" id="tooltip"></div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
