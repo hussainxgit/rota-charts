@@ -21,8 +21,8 @@ copyDirectory(path.join(srcDir, 'repository'), path.join(destDir, 'repository'))
 
 // Copy HTML files
 copyFile(path.join(srcDir, 'index.html'), path.join(destDir, 'index.html'));
-copyFile(path.join(srcDir, 'screens', 'rota_charts.html'), path.join(destDir, 'rota_charts.html'));
-copyFile(path.join(srcDir, 'screens', 'residents_charts.html'), path.join(destDir, 'residents_charts.html'));
+copyFile(path.join(srcDir, 'rota_charts.html'), path.join(destDir, 'rota_charts.html'));
+copyFile(path.join(srcDir, 'residents_charts.html'), path.join(destDir, 'residents_charts.html'));
 
 // Create .nojekyll file to prevent GitHub from ignoring files that begin with underscores
 fs.writeFileSync(path.join(destDir, '.nojekyll'), '');
