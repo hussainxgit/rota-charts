@@ -1,0 +1,270 @@
+{
+  "residents": [
+    {
+      "name": "ديمه الشايع",
+      "from": "Amiri",
+      "startDate": "10-Mar-24",
+      "endDate": "9-Jun-24",
+      "notes": "Full"
+    },
+    {
+      "name": "ساره خورشيد",
+      "from": "Amiri",
+      "startDate": "17-Mar-24",
+      "endDate": "16-Jun-24",
+      "notes": "Full"
+    },
+    {
+      "name": "سعد الهاجري",
+      "from": "Other",
+      "startDate": "12-May-24",
+      "endDate": "12-Aug-24",
+      "notes": "Full"
+    },
+    {
+      "name": "فهد الحربي",
+      "from": "Furwaniah",
+      "startDate": "15-May-24",
+      "endDate": "14-Aug-24",
+      "notes": "Full"
+    },
+    {
+      "name": "نورا عبدالله احمد عبدالجليل",
+      "from": "KIMS",
+      "startDate": "20-May-24",
+      "endDate": "19-Jun-24",
+      "notes": "Elective"
+    },
+    {
+      "name": "فاطمه خالد الذياب",
+      "from": "Jahra",
+      "startDate": "2-Jun-24",
+      "endDate": "1-Sep-24",
+      "notes": "Full"
+    },
+    {
+      "name": "عبدالعزيز صادق حبيب حسن",
+      "from": "Amiri",
+      "startDate": "9-Jun-24",
+      "endDate": "8-Sep-24",
+      "notes": "Full"
+    },
+    {
+      "name": "عبدالوهب العدساني",
+      "from": "University",
+      "startDate": "23-Jun-24",
+      "endDate": "11-Jul-24",
+      "notes": "Full"
+    },
+    {
+      "name": "مريم بندر حمود العتيبي",
+      "from": "University",
+      "startDate": "21-Jul-24",
+      "endDate": "1-Aug-24",
+      "notes": "Full"
+    },
+    {
+      "name": "فاطمه عباس جاسم حسن",
+      "from": "KIMS",
+      "startDate": "28-Jul-24",
+      "endDate": "27-Aug-24",
+      "notes": "Elective"
+    },
+    {
+      "name": "جنى علي عباس علي احمد صالح",
+      "from": "University",
+      "startDate": "29-Jul-24",
+      "endDate": "22-Aug-24",
+      "notes": "Full"
+    },
+    {
+      "name": "بدور بدر الهويدي",
+      "from": "Emergency",
+      "startDate": "1-Aug-24",
+      "endDate": "31-Aug-24",
+      "notes": "Full"
+    },
+    {
+      "name": "ساره طلال فاخر صالح",
+      "from": "University",
+      "startDate": "4-Aug-24",
+      "endDate": "15-Aug-24",
+      "notes": "Elective"
+    },
+    {
+      "name": "منار صالح العبدالرزاق",
+      "from": "University",
+      "startDate": "4-Aug-24",
+      "endDate": "29-Aug-24",
+      "notes": "Elective"
+    },
+    {
+      "name": "عبدالمحسن محمد الحربي",
+      "from": "KIMS",
+      "startDate": "22-Aug-24",
+      "endDate": "21-Sep-24",
+      "notes": "Full"
+    },
+    {
+      "name": "مريم نواف الصليلي العنزي",
+      "from": "Other",
+      "startDate": "1-Sep-24",
+      "endDate": "30-Sep-24",
+      "notes": "Full"
+    },
+    {
+      "name": "زهراء عيسى القلاف",
+      "from": "Emergency",
+      "startDate": "1-Sep-24",
+      "endDate": "30-Sep-24",
+      "notes": "Full"
+    },
+    {
+      "name": "سعود عبدالله محمد الكندري",
+      "from": "Furwaniah",
+      "startDate": "5-Sep-24",
+      "endDate": "5-Dec-24",
+      "notes": "Full"
+    },
+    {
+      "name": "سالم خالد المري",
+      "from": "Furwaniah",
+      "startDate": "29-Sep-24",
+      "endDate": "1-Jan-25",
+      "notes": "Full"
+    },
+    {
+      "name": "حمد عماد محمد العوضي",
+      "from": "Elective",
+      "startDate": "1-Oct-24",
+      "endDate": "31-Oct-24",
+      "notes": "Full"
+    },
+    {
+      "name": "شيخه منصور ادغيم الهبيده",
+      "from": "Mubarak",
+      "startDate": "8-Oct-24",
+      "endDate": "7-Nov-24",
+      "notes": "Elective"
+    },
+    {
+      "name": "محمد عبدالعزيز سعود الهاجري",
+      "from": "Adan",
+      "startDate": "8-Oct-24",
+      "endDate": "7-Nov-24",
+      "notes": "Elective"
+    },
+    {
+      "name": "يوسف مساعد صالح النبهان",
+      "from": "KIMS",
+      "startDate": "13-Oct-24",
+      "endDate": "12-Nov-24",
+      "notes": "Full"
+    },
+    {
+      "name": "صفاء عبدالمجيد الشريفي",
+      "from": "Sabbah",
+      "startDate": "16-Oct-24",
+      "endDate": "13-Nov-24",
+      "notes": "Full"
+    },
+    {
+      "name": "علي محمد غلوم سوز علي",
+      "from": "KIMS",
+      "startDate": "22-Oct-24",
+      "endDate": "21-Nov-24",
+      "notes": "Elective"
+    },
+    {
+      "name": "نور عمار ياسر العلي",
+      "from": "Jaber",
+      "startDate": "29-Oct-24",
+      "endDate": "28-Nov-24",
+      "notes": "Elective"
+    },
+    {
+      "name": "حمد راشد حمد العازمي",
+      "from": "KIMS",
+      "startDate": "28-Nov-24",
+      "endDate": "27-Dec-24",
+      "notes": "Elective"
+    },
+    {
+      "name": "ترف العتيبي",
+      "from": "Neurology",
+      "startDate": "1-Dec-24",
+      "endDate": "31-Dec-24",
+      "notes": "Board Rotation"
+    },
+    {
+      "name": "قطوف طارق الخالدي",
+      "from": "KIMS",
+      "startDate": "23-Feb-25",
+      "endDate": "22-Mar-25",
+      "notes": "Elective"
+    },
+    {
+      "name": "نوره محمد مجبل الغريبه",
+      "from": "KIMS",
+      "startDate": "16-Mar-25",
+      "endDate": "15-Apr-25",
+      "notes": "Elective"
+    },
+    {
+      "name": "شهد طارق محمد",
+      "from": "KIMS",
+      "startDate": "2-Apr-25",
+      "endDate": "30-Apr-25",
+      "notes": "Elective"
+    },
+    {
+      "name": "علي احمد مصطفى الخباز",
+      "from": "Sabbah",
+      "startDate": "6-Apr-25",
+      "endDate": "6-Jun-25",
+      "notes": "Full"
+    },
+    {
+      "name": "يوسف مساعد صالح النبهان",
+      "from": "KIMS",
+      "startDate": "13-Apr-25",
+      "endDate": "12-May-25",
+      "notes": "Elective"
+    },
+    {
+      "name": "علي محمد علي بهبهاني",
+      "from": "KIMS",
+      "startDate": "25-Apr-25",
+      "endDate": "23-May-25",
+      "notes": "Elective"
+    },
+    {
+      "name": "مشاري سلطان العنزي",
+      "from": "Furwaniah",
+      "startDate": "4-May-25",
+      "endDate": "1-Aug-25",
+      "notes": "Full"
+    },
+    {
+      "name": "حمد عماد العوضي",
+      "from": "Amiri",
+      "startDate": "3-Aug-25",
+      "endDate": "30-Aug-25",
+      "notes": "Full"
+    },
+    {
+      "name": "عبدالعزيز انور احمد محمد",
+      "from": "KIMS",
+      "startDate": "3-Aug-25",
+      "endDate": "2-Sep-25",
+      "notes": "Elective"
+    },
+    {
+      "name": "سارة فاضل عبدالله كنكوني",
+      "from": "KIMS",
+      "startDate": "2-Sep-25",
+      "endDate": "1-Oct-25",
+      "notes": "Elective"
+    }
+  ]
+}

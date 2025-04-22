@@ -1,56 +1,63 @@
-// 1. Create a script to pre-process your data for static hosting
-// save as scripts/prepare-for-github.js
-
 const fs = require('fs');
 const path = require('path');
 
-// Copy data.json to docs folder
-const sourceDataPath = path.join(__dirname, '../lib/repository/data.json');
-const destDir = path.join(__dirname, '../docs');
-const destDataPath = path.join(destDir, 'data.json');
+// Define paths
+const srcDir = path.join(__dirname, '..', 'lib');
+const destDir = path.join(__dirname, '..', 'docs');
 
-// Create docs directory if it doesn't exist
+// Create destination directory if it doesn't exist
 if (!fs.existsSync(destDir)) {
-  fs.mkdirSync(destDir, { recursive: true });
+    fs.mkdirSync(destDir, { recursive: true });
 }
 
-// Copy data file
-fs.copyFileSync(sourceDataPath, destDataPath);
+// Copy CSS directory
+copyDirectory(path.join(srcDir, 'css'), path.join(destDir, 'css'));
 
-// Copy HTML, CSS, and JS files
-const sourceHtmlPath = path.join(__dirname, '../lib/index.html');
-const destHtmlPath = path.join(destDir, 'index.html');
-fs.copyFileSync(sourceHtmlPath, destHtmlPath);
+// Copy JS directory
+copyDirectory(path.join(srcDir, 'js'), path.join(destDir, 'js'));
 
-// Create CSS directory
-const cssDest = path.join(destDir, 'css');
-if (!fs.existsSync(cssDest)) {
-  fs.mkdirSync(cssDest, { recursive: true });
+// Copy repository directory
+copyDirectory(path.join(srcDir, 'repository'), path.join(destDir, 'repository'));
+
+// Copy HTML files
+copyFile(path.join(srcDir, 'index.html'), path.join(destDir, 'index.html'));
+copyFile(path.join(srcDir, 'screens', 'rota_charts.html'), path.join(destDir, 'rota_charts.html'));
+copyFile(path.join(srcDir, 'screens', 'residents_charts.html'), path.join(destDir, 'residents_charts.html'));
+
+// Create .nojekyll file to prevent GitHub from ignoring files that begin with underscores
+fs.writeFileSync(path.join(destDir, '.nojekyll'), '');
+
+console.log('Files prepared for GitHub Pages in the docs directory');
+
+// Helper functions
+function copyFile(src, dest) {
+    try {
+        const data = fs.readFileSync(src);
+        fs.writeFileSync(dest, data);
+        console.log(`Copied: ${path.basename(src)} to ${dest}`);
+    } catch (err) {
+        console.error(`Error copying ${src}: ${err.message}`);
+    }
 }
 
-// Copy CSS file
-const sourceCssPath = path.join(__dirname, '../lib/css/styles.css');
-const destCssPath = path.join(cssDest, 'styles.css');
-fs.copyFileSync(sourceCssPath, destCssPath);
+function copyDirectory(src, dest) {
+    // Create destination directory if it doesn't exist
+    if (!fs.existsSync(dest)) {
+        fs.mkdirSync(dest, { recursive: true });
+    }
 
-// Create JS directory
-const jsDest = path.join(destDir, 'js');
-if (!fs.existsSync(jsDest)) {
-  fs.mkdirSync(jsDest, { recursive: true });
+    // Read directory contents
+    const entries = fs.readdirSync(src, { withFileTypes: true });
+
+    // Copy each entry
+    for (const entry of entries) {
+        const srcPath = path.join(src, entry.name);
+        const destPath = path.join(dest, entry.name);
+
+        if (entry.isDirectory()) {
+            copyDirectory(srcPath, destPath);
+        } else {
+            copyFile(srcPath, destPath);
+        }
+    }
 }
-
-// Modify JS file for GitHub Pages
-const sourceJsPath = path.join(__dirname, '../lib/js/script.js');
-let jsContent = fs.readFileSync(sourceJsPath, 'utf8');
-
-// Update data.json path for GitHub Pages
-jsContent = jsContent.replace(
-  "const response = await fetch('/repository/data.json');",
-  "const response = await fetch('./data.json');"
-);
-
-// Write modified JS file
-const destJsPath = path.join(jsDest, 'script.js');
-fs.writeFileSync(destJsPath, jsContent);
-
-console.log('Files prepared for GitHub Pages in the "docs" folder');
