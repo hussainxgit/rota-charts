@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         async loadData() {
             try {
-                const response = await fetch('/repository/residents_data.json');
+                const response = await fetch('./repository/residents_data.json');
                 if (!response.ok) throw new Error('Failed to load residents data');
                 this.data = await response.json();
                 this.processData();
